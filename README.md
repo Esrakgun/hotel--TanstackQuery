@@ -86,4 +86,25 @@ Kapsamlı konaklama seçenekleri, detaylı filtreleme sistemi ve interaktif hari
 # 🖼️ Projeden Görüntü:
 “Nereye gideceğine sen karar ver, konforu sana biz getirelim.Hayalindeki konaklama, tek tık uzağında.Konum seç, filtrele, yerini ayırt — Tatil artık senin kontrolünde!Şehirden doğaya, her bütçeye özel konaklama burada.”
 
-![](public/Tripster.mp4)
+
+https://github.com/user-attachments/assets/d277e6c7-91aa-4a95-aba2-6ac23e62f433
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
