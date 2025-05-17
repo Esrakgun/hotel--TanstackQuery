@@ -1,0 +1,52 @@
+import { useEffect, useState, type FC } from "react";
+import api from "../../utils/api";
+import type { Place } from "../../types";
+
+
+
+const ListClassic:FC = () => {
+
+ const [isLoading,setIsLoading] = useState<boolean>(false);
+
+const [error,setIsError] = useState<string|null>(null);
+
+const [data,setData] = useState<Place[]>([]);
+
+
+
+useEffect(()=>{
+  setIsLoading(true);
+  api
+  .get<{places:Place[]}>("/places")
+  .then((res)=>setData(res.data.places))
+  .catch((err)=>setIsError(err.message))
+  .finally(()=>setIsLoading(false));
+},[]);
+
+console.log(data);
+
+
+if(isLoading) return <div>Yükleniyor..</div>;
+
+if(error) return <div>{error}</div>;
+
+
+
+return (
+  <div>
+    <h1 className="text-3xl mb-5 text-blue-900">Classic'den Gelen Yer:</h1>
+    {data.map((place)=>(
+      <div key={place.id}>
+        <h1 className="text-2xl font-bold mb-5">{place.name}</h1></div>
+    ))}
+  </div>
+)
+}
+
+export default ListClassic;
+
+
+
+
+
+
